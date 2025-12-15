@@ -3,14 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alternative Investment Traps — An Investor’s Guide</title>
-  <meta name="description" content="Alternative Investment Traps: An Investor’s Guide — a premium digital briefing for serious investors." />
-
-  <!-- Basic social preview -->
-  <meta property="og:title" content="Alternative Investment Traps — An Investor’s Guide" />
-  <meta property="og:description" content="A premium digital briefing on the traps investors miss in alternative investments." />
-  <meta property="og:image" content="hero.png" />
-  <meta property="og:type" content="website" />
+  <title>Alternative Investment Traps – An Investor’s Guide</title>
+  <meta name="description" content="A premium digital investor briefing on the most common traps in alternative investments." />
 
   <style>
     :root{
@@ -21,13 +15,11 @@
       --line:#1e242c;
       --gold:#d6b25e;
       --gold2:#e0c16f;
-      --navy:#0e2a47;
       --radius:14px;
     }
-
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.6}
-    a{color:inherit}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.55}
+    a{color:inherit;text-decoration:none}
 
     .wrap{max-width:980px;margin:0 auto;padding:0 22px}
 
@@ -36,291 +28,135 @@
       min-height:100vh;
       display:flex;
       align-items:center;
-      position:relative;
-      overflow:hidden;
       background:
-        linear-gradient(180deg, rgba(11,15,20,.35) 0%, rgba(11,15,20,.88) 70%, rgba(11,15,20,1) 100%),
+        linear-gradient(180deg, rgba(11,15,20,.35), rgba(11,15,20,.9)),
         url("hero.png") center/cover no-repeat;
     }
-    .hero::after{
-      content:"";
-      position:absolute;inset:0;
-      background:radial-gradient(900px 500px at 20% 20%, rgba(214,178,94,.12), transparent 60%);
-      pointer-events:none;
-    }
-    .hero-inner{
-      position:relative;
-      width:100%;
-      padding:90px 0 70px;
-      text-align:left;
-    }
-    .brand{
-      display:flex;align-items:center;gap:10px;
-      font-weight:800;letter-spacing:.02em;
-      margin-bottom:18px;color:#e9eef6;
-    }
-    .dot{width:10px;height:10px;border-radius:50%;background:var(--gold)}
-    .badge{
-      display:inline-block;
-      border:1px solid rgba(255,255,255,.16);
-      padding:6px 10px;border-radius:999px;
-      font-size:12px;letter-spacing:.12em;text-transform:uppercase;
-      color:rgba(255,255,255,.85);
-      backdrop-filter: blur(6px);
-    }
+    .hero-inner{padding:90px 0 70px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;margin-bottom:14px}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--gold)}
 
-    h1{
-      margin:14px 0 10px;
-      font-size:clamp(2.2rem, 5vw, 3.4rem);
-      line-height:1.15;
-      letter-spacing:-.02em;
-    }
-    .subtitle{
-      max-width:750px;
-      color:rgba(255,255,255,.82);
-      font-size:clamp(1.05rem, 2.1vw, 1.25rem);
-      margin:0 0 26px;
-    }
+    h1{font-size:clamp(2.3rem,5vw,3.3rem);margin:10px 0}
+    .subtitle{max-width:760px;color:rgba(255,255,255,.82);font-size:1.15rem;margin-bottom:22px}
 
-    .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:12px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px}
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 18px;border-radius:10px;
-      border:1px solid rgba(255,255,255,.16);
-      text-decoration:none;font-weight:700;
-      transition:transform .08s ease, background .2s ease, border-color .2s ease;
-      user-select:none;
+      padding:12px 18px;border-radius:10px;font-weight:700;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(18,24,33,.7);
     }
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{
-      background:var(--gold);
-      border-color:var(--gold);
-      color:#0b0f14;
-    }
-    .btn-primary:hover{background:var(--gold2);border-color:var(--gold2)}
-    .btn-ghost{
-      background:rgba(18,24,33,.62);
-    }
-    .btn-ghost:hover{border-color:rgba(255,255,255,.28)}
-    .micro{
-      margin-top:16px;
-      color:rgba(255,255,255,.62);
-      font-size:13px;
-    }
+    .btn-primary{background:var(--gold);color:#0b0f14;border-color:var(--gold)}
+    .btn-primary:hover{background:var(--gold2)}
 
-    /* SECTIONS */
-    section{padding:62px 0;border-top:1px solid var(--line)}
-    .grid{display:grid;gap:18px}
+    .micro{margin-top:14px;color:rgba(255,255,255,.6);font-size:13px}
+
+    section{padding:56px 0;border-top:1px solid var(--line)}
+    .grid{display:grid;gap:16px}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     @media(max-width:900px){.grid-3{grid-template-columns:1fr}}
-    .card{
-      background:var(--panel);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:var(--radius);
-      padding:20px;
-    }
-    h2{
-      margin:0 0 16px;
-      font-size:22px;
-      letter-spacing:-.01em;
-      color:#eef2f7;
-    }
-    h3{
-      margin:0 0 10px;
-      font-size:16px;
-      color:#eef2f7;
-    }
+
+    .card{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:18px}
+    h2{font-size:22px;margin-bottom:12px}
+    h3{font-size:16px;margin-bottom:6px}
     .muted{color:var(--muted)}
-    ul{margin:10px 0 0 18px}
-    li{margin:0 0 8px}
 
-    /* PRICE */
-    .pricebox{
-      display:flex;flex-wrap:wrap;gap:18px;
-      align-items:center;justify-content:space-between;
-    }
-    .price{
-      font-size:34px;font-weight:900;color:var(--gold);
-    }
-    .pill{
-      display:inline-block;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      color:rgba(255,255,255,.75);
-      font-size:13px;
-      margin-right:8px;
-      background:rgba(255,255,255,.03);
-    }
+    ul{margin:8px 0 0 18px}
+    li{margin-bottom:8px}
 
-    /* FOOTER */
-    footer{
-      padding:42px 0 60px;
-      color:rgba(255,255,255,.62);
-      font-size:14px;
-      border-top:1px solid var(--line);
-    }
-    .fine{
-      font-size:13px;
-      color:rgba(255,255,255,.55);
-      margin-top:10px;
-      max-width:900px;
-    }
-    .contact{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;
-    }
-    code.k{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      padding:2px 8px;border-radius:8px;
-    }
+    .pricebox{display:flex;justify-content:space-between;align-items:center;gap:18px}
+    .price{font-size:34px;font-weight:900;color:var(--gold)}
+
+    footer{padding:36px 0;color:rgba(255,255,255,.6);font-size:14px;border-top:1px solid var(--line)}
+    .fine{font-size:13px;margin-top:8px}
   </style>
 </head>
 
 <body>
 
-  <!-- EDIT THESE 3 VALUES -->
-  <script>
-    // Replace with your real Digistore24 order link:
-    const CHECKOUT_URL = "DIGISTORE24_CHECKOUT_LINK";
+<script>
+  const CHECKOUT_URL = "DIGISTORE24_CHECKOUT_LINK";
+  const WHATSAPP_NUMBER = "+46700193462";
+</script>
 
-    // Replace with your number in international format (no spaces):
-    // Example Sweden: +46700123456
-    const WHATSAPP_NUMBER = "+46XXXXXXXXX";
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="brand"><span class="dot"></span>ArceoConsult</div>
 
-    const SUPPORT_EMAIL = "info@arceogroup.se";
-  </script>
+    <h1>Alternative Investment Traps</h1>
+    <p class="subtitle">
+      An investor’s guide to what quietly breaks when the narrative sounds perfect.
+      Structure, incentives, liquidity, fees and valuation.
+    </p>
 
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <span>ArceoConsult</span>
-      </div>
-
-      <span class="badge">Digital Investor Briefing</span>
-
-      <h1>Alternative Investment Traps</h1>
-      <p class="subtitle">
-        An Investor’s Guide to what quietly breaks when the narrative sounds perfect —
-        structure, incentives, liquidity, fees, and valuation.
-      </p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#" id="btnBuyTop">Get Instant Access</a>
-        <a class="btn btn-ghost" href="mailto:info@arceogroup.se">Email Support</a>
-        <a class="btn btn-ghost" href="#" id="btnWhatsAppTop">WhatsApp</a>
-      </div>
-
-      <div class="micro">
-        One-time payment • Instant delivery • Built for serious decision-makers
-      </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" id="buyTop">Get Instant Access</a>
+      <a class="btn" id="waTop">WhatsApp</a>
     </div>
-  </header>
 
-  <section>
-    <div class="wrap">
-      <h2>Who this is for</h2>
-      <div class="grid grid-3">
-        <div class="card">
-          <h3>Private investors</h3>
-          <div class="muted">Evaluating private deals, funds, or “exclusive” opportunities.</div>
-        </div>
-        <div class="card">
-          <h3>Founders &amp; entrepreneurs</h3>
-          <div class="muted">Deploying liquidity and wanting discipline, not hype.</div>
-        </div>
-        <div class="card">
-          <h3>Decision-makers</h3>
-          <div class="muted">Needing a clean framework under uncertainty.</div>
-        </div>
-      </div>
+    <div class="micro">One-time payment · Instant delivery · Built for serious decision-makers</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Who this is for</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Private investors</h3><div class="muted">Evaluating private deals or funds.</div></div>
+      <div class="card"><h3>Founders & entrepreneurs</h3><div class="muted">Deploying liquidity with discipline.</div></div>
+      <div class="card"><h3>Decision-makers</h3><div class="muted">Needing clarity under uncertainty.</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="wrap">
-      <h2>What this guide covers</h2>
-      <div class="card">
-        <ul>
-          <li><strong>Structure traps:</strong> terms that look sophisticated but shift risk onto the investor.</li>
-          <li><strong>Liquidity illusions:</strong> when “exit options” are marketing, not reality.</li>
-          <li><strong>Incentive misalignment:</strong> how sponsors win even when investors don’t.</li>
-          <li><strong>Valuation mechanics:</strong> how pricing and reporting can mask fragility.</li>
-          <li><strong>Fee drag:</strong> where the real cost hides (and how it compounds).</li>
-          <li><strong>Practical framework:</strong> a simple way to decide when information is incomplete.</li>
-        </ul>
-        <p class="fine">
-          No ideology. No promises. Just risk clarity and better questions.
-        </p>
-      </div>
+<section>
+  <div class="wrap">
+    <h2>What this guide covers</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Structure traps:</strong> terms that shift risk onto the investor.</li>
+        <li><strong>Liquidity illusions:</strong> when exit options are marketing.</li>
+        <li><strong>Incentive misalignment:</strong> sponsors win even when investors don’t.</li>
+        <li><strong>Valuation mechanics:</strong> pricing that masks fragility.</li>
+        <li><strong>Fee drag:</strong> hidden costs and compounding impact.</li>
+        <li><strong>Practical framework:</strong> deciding with incomplete information.</li>
+      </ul>
+      <div class="fine">No ideology. No promises. Just risk clarity.</div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="wrap">
-      <h2>Price</h2>
-      <div class="card pricebox">
-        <div>
-          <div class="pill">Digital PDF</div>
-          <div class="pill">Instant access</div>
-          <div class="pill">One-time payment</div>
-        </div>
-        <div class="price">$299 USD</div>
-      </div>
-
-      <div class="cta-row" style="margin-top:18px">
-        <a class="btn btn-primary" href="#" id="btnBuyMid">Secure Checkout</a>
-        <a class="btn btn-ghost" href="#" id="btnWhatsAppMid">Questions on WhatsApp</a>
-      </div>
+<section>
+  <div class="wrap">
+    <h2>Price</h2>
+    <div class="card pricebox">
+      <div class="muted">Digital PDF · Instant access · One-time payment</div>
+      <div class="price">$299 USD</div>
     </div>
-  </section>
 
-  <footer>
-    <div class="wrap">
-      <div><strong>Support:</strong> <a href="mailto:info@arceogroup.se">info@arceogroup.se</a></div>
-
-      <div class="contact">
-        <span class="pill">Email: <code class="k">info@arceogroup.se</code></span>
-        <span class="pill">WhatsApp: <code class="k" id="waLabel">+46XXXXXXXXX</code></span>
-      </div>
-
-      <div class="fine">
-        <strong>Important:</strong> Educational material only. This is not investment advice, financial advice,
-        or a recommendation to buy/sell any asset. You are responsible for your own decisions.
-      </div>
+    <div class="cta-row" style="margin-top:16px">
+      <a class="btn btn-primary" id="buyMid">Secure Checkout</a>
+      <a class="btn" id="waMid">Questions on WhatsApp</a>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    // Wire buttons
-    const buyBtns = ["btnBuyTop","btnBuyMid"];
-    buyBtns.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.href = CHECKOUT_URL;
-    });
+<footer>
+  <div class="wrap">
+    <div>Support: <strong>info@arceogroup.se</strong></div>
+    <div class="fine">
+      Educational material only. Not investment advice. You are responsible for your own decisions.
+    </div>
+  </div>
+</footer>
 
-    const waUrl = "https://wa.me/" + WHATSAPP_NUMBER.replace(/\+/g,"");
-    const waBtns = ["btnWhatsAppTop","btnWhatsAppMid"];
-    waBtns.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.href = waUrl;
-    });
+<script>
+  document.getElementById("buyTop").href = CHECKOUT_URL;
+  document.getElementById("buyMid").href = CHECKOUT_URL;
 
-    const waLabel = document.getElementById("waLabel");
-    if (waLabel) waLabel.textContent = WHATSAPP_NUMBER;
+  const waUrl = "https://wa.me/" + WHATSAPP_NUMBER.replace("+","");
+  document.getElementById("waTop").href = waUrl;
+  document.getElementById("waMid").href = waUrl;
+</script>
 
-    // Safety: If checkout link not set, avoid broken navigation.
-    if (CHECKOUT_URL === "DIGISTORE24_CHECKOUT_LINK") {
-      buyBtns.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.addEventListener("click", (e) => {
-            e.preventDefault();
-            alert("Replace DIGISTORE24_CHECKOUT_LINK in index.html with your real Digistore24 order link.");
-          });
-        }
-      });
-    }
-  </script>
 </body>
 </html>
